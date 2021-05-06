@@ -1,0 +1,584 @@
+<div class="covid"> 
+<h3>Welcome To The Story Shop</h3>
+<h3 style="color :black">Your one stop solution for all your book needs!</h3>
+</div>
+<br>
+
+
+<img src="https://images.bewakoof.com/uploads/grid/app/Desktop-All-Order-1619600650.png" alt="Bewakoof Updates" style=" width: 100%; top: 0px;">
+<br>
+<br>
+
+
+<div class="container col-sm-10 "style="border: gray 2px solid; border-radius: 10px; box-shadow: gray 5px; padding: 5px;">
+<div class="row" style="display: flex-warp;">
+
+<div class="col-xl-4 col-md-3 col-sm-8 col-10 mx-auto" >
+  <a routerLink ="/discount/15" style="cursor: pointer;">
+    <img src="assets/images/1st15off.png" width="300" height="400"/>
+  </a>
+</div>
+
+<div class=" col-xl-4 col-md-3 col-sm-8 col-10 mx-auto">
+  <a routerLink ="/discount/30">
+    <img src="assets/images/2nd15Off.png" width="300" height="400"/>
+  </a>
+  </div>
+<div class=" col-xl-4 col-md-3 col-sm-8 col-10 mx-auto">
+  <a routerLink ="/discount/50">
+    <img src="assets/images/3rd50off.png" width="300" height="400"/>
+  </a>  
+</div>
+  
+  
+</div>
+</div>
+
+  
+
+
+  <br><br>
+
+
+  <div >
+
+      <nav class="navbar navbar-light bg-light justify-content-between">
+          <div class="navbar-brand" style="align-items:center;" >
+              <span style="font-size: 35px; Font-Family: 'Roboto Condensed', Sans-Serif;"> DEALS OF THE DAY  </span> 
+              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/stopwatch.png" width="35" height="34" class="d-inline-block" style="margin-left: 15px;">
+                <span style="padding-left: 10px;"> {{demo}} </span>
+            </div>
+            <!-- <button class="btn btn-outsuccessline- my-2 my-sm-0  badge-primary" type="submit">View All</button> -->
+        </nav> 
+    </div>
+  <br>
+
+  
+    <div class="card-deck col-md-12 col-sm-6 col-12">
+        <div class="card col-md-4 col-sm-6 col-12 "*ngFor="let detail of prdetail " style="padding-top: 8px;padding-bottom: 8px">
+          <a routerLink ="/testdetails/{{detail._id}}"><img class="card-img-top" src="{{detail.thumbnailUrl}}" alt="Card image cap"> </a> 
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center; height: 80px; ">{{detail.title}}</h5>
+            <p class="card-text" style="text-align: center;  height: 80px"> {{detail.authors}}</p>
+                <p style="color:green; text-align: center;">( Upto {{detail.discount}}% off)</p>
+                <p class="card-text" style="text-align: center;">{{detail.categories}}</p>
+              </div>
+                <span class="card-body" style=" padding:0">
+                  <!-- <a routerLink ="/wishlist/{{detail._id}}/608d0f1716ca61368c811489"> -->
+                    <button class="btn" (click)="addToList(detail._id,username)"  >
+                      <i class="bi bi-heart-fill " ></i>
+                    
+                    </button>
+                  <!-- </a> -->
+                  <button class="btn" style="float: right;" (click)="addToCart(detail._id,username)">
+
+                  <i class="bi bi-cart-plus-fill"></i>
+                  </button>
+                </span>
+              
+        </div>
+      </div>
+    
+      <br>
+      <br>
+      <a href ="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html">
+        <img src="assets/images/Untitled1.png" alt="Ketto" style=" width: 100%; height: 300px;; top: 0px;">
+      </a>
+
+
+      <br>
+      
+      
+      <div class="container-fluid" style="padding-top: 25px; ">
+        <div  style="height: 45px; padding: 40px; margin-bottom: 8px; text-align: center;"><h3>NEW ARRIVALS </h3> </div> 
+      
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-sm-12 ">
+            <div id="inam" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                   <div class="container">
+                     <div class="row gallery"  >
+                      <div class="col-sm-12 col-lg-4 col-md-12" *ngFor="let detail of newarrival1 ">
+                        <a routerLink ="/testdetails/{{detail._id}}">
+
+                      <div class="content" style="width: 300px;height: 470px;margin: auto; background-color: rgb(255,255, 255); box-shadow: 10px 10px 10px 10px rgb(163, 163, 160);">
+                       <div style="  height:450px">
+
+                        <img src="{{detail.thumbnailUrl}}" class="card-img-top">
+                        <div class="card-body">
+                          <h4 style="  height:70px ;  color:black"class="card-title">{{detail.title}}</h4>
+                          <p class="card-text" style="  height:60px ">{{detail.authors}}</p>
+                          <p class="card-text">{{detail.categories}}</p>
+                          <h6 class="card-text"> &#x20B9;{{detail.price}}</h6>
+                         
+                         </div>
+              
+                         </div>                 
+                    </div></a> 
+                   </div>
+                       
+                       
+                     </div>
+                     
+                   </div>
+      
+                  
+                </div>
+                <div class="carousel-item">
+                   <div class="container">
+                     <div class="row gallery" >
+                       
+                      <div class="col-sm-12 col-lg-4" *ngFor="let detail of newarrival2 ">
+                        <a routerLink ="/testdetails/{{detail._id}}">
+                        <div class="content" style="width: 300px;height: 470px;margin: auto; background-color: rgb(255,255, 255); box-shadow: 10px 10px 10px 10px rgb(163, 163, 160);">
+                         <div style="  height:450px">
+                          <img src="{{detail.thumbnailUrl}}" class="card-img-top">
+                          <div class="card-body">
+                            <h4 style="  height:70px ;  color:black"class="card-title">{{detail.title}}</h4>
+                            <p class="card-text" style="  height:60px ">{{detail.authors}}</p>
+                            <p class="card-text">{{detail.categories}}</p>
+                            <h6 class="card-text"> &#x20B9;{{detail.price}}</h6>
+                           </div>
+                           </div>                 
+                      </div> </a>
+                     </div>
+                     </div>
+                     
+                   </div>
+      
+                  
+                </div>
+      
+                <div class="carousel-item">
+                  <div class="container">
+                    <div class="row gallery">
+                      
+                     <div class="col-sm-12 col-lg-4" *ngFor="let detail of newarrival3 ">
+                      <a routerLink ="/testdetails/{{detail._id}}">
+                       <div class="content" style="width: 300px;height: 470px;margin: auto; background-color: rgb(255,255, 255); box-shadow: 10px 10px 10px 10px rgb(163, 163, 160);">
+                        <div style="  height:450px">
+                         <img src="{{detail.thumbnailUrl}}" class="card-img-top">
+                         <div class="card-body">
+                           <h4 style="  height:70px ;  color:black ;"class="card-title">{{detail.title}}</h4>
+                           <p class="card-text" style="  height:60px ">{{detail.authors}}</p>
+                           
+                           <p class="card-text">{{detail.categories}}</p>
+                           <h6 class="card-text"> &#x20B9;{{detail.price}}</h6>
+                          </div>
+                          </div>                 
+                     </div></a>
+                    </div>
+                    
+                  </div>
+      
+                 
+               </div>
+                
+              </div>
+              <a href="#inam" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a href="#inam" class="carousel-control-next" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      </div>
+      <br>
+
+      <br>
+
+
+      <div class="container-fluid" style="border: gray 2px solid;">
+        <a routerLink ="/discount/50">
+        <img src="assets/images/sale-banner-main.png" width="100%" height="300"/>
+        </a>  
+      </div>
+
+      <br>  <br>  
+      
+     
+   
+      <!-- <h2 style=" font-size: 25px;font-family: montserrat,sans-serif; text-transform: uppercase;"> Categories For You</h2> -->
+
+      <div  style="height: 45px; padding: 40px; margin-bottom: 8px; text-align: center;"><h3>CATEGORIES FOR YOU </h3> </div>
+  <div class="row" >
+
+  <div class="chOptionWrapper">
+    
+    <!-- <div class="chTitle"> <strong> <h3>CATEGORIES FOR YOU </h3> </strong> </div> <br> -->
+     
+
+    <!-- -------------------1 -->
+
+    <div class="chWrprInner">
+          <a  routerLink ="/category/Angular">
+            <div class="chImgWrpr">
+              <img src="assets/images/Angular.jpeg" height="200" width="200" >
+            </div>
+            <div class="tagStyle" style="width: 150px;">
+            </div>
+            <p>Angular</p>
+          </a>
+        </div>
+
+  <!-- -------------------2 -->
+
+  <div class="chWrprInner">
+    <a  routerLink ="/category/Python">
+      <div class="chImgWrpr">
+        <img src="assets/images/python.png" height="200" width="200">
+      </div>
+      <div class="tagStyle" style="width: 150px;">
+      </div>
+      <p>Python</p>
+    </a>
+  </div>
+
+    <!-- -------------------3 -->
+
+    <div class="chWrprInner">
+      <a  routerLink ="/category/C#">
+        <div class="chImgWrpr">
+          <img src="assets/images/Csharp.jpg" height="200" width="200" >
+        </div>
+        <div class="tagStyle" style="width: 150px;">
+        </div>
+        <p>C#</p>
+      </a>
+    </div>
+
+    <!-- -------------------4 -->
+
+    <div class="chWrprInner">
+      <a  routerLink ="/category/Open Source">
+        <div class="chImgWrpr">
+          <img src="assets/images/opensourse.png" height="200" width="200" >
+        </div>
+        <div class="tagStyle" style="width: 150px;">
+        </div>
+        <p>Open Source </p>
+      </a>
+    </div>
+
+  <!-- -------------------5 -->
+
+    <div class="chWrprInner">
+    <a  routerLink ="/category/Perl">
+      <div class="chImgWrpr">
+        <img src="assets/images/perl.jpeg" height="200" width="200" >
+      </div>
+      <div class="tagStyle" style="width: 150px;">
+      </div>
+      <p>Perl</p>
+    </a>
+    </div>
+
+    <!-- -------------------6 -->
+
+    <div class="chWrprInner">
+      <a  routerLink ="/category/Web Development">
+        <div class="chImgWrpr">
+          <img src="assets/images/black-web-development.jpg" height="200" width="200" >
+        </div>
+        <div class="tagStyle" style="width: 150px;">
+        </div>
+        <p>Web Devlopment</p>
+      </a>
+    </div>
+    <!-- -------------------7 -->
+
+    <div class="chWrprInner">
+          <a  routerLink ="/category/JavaScript">
+            <div class="chImgWrpr">
+              <img src="assets/images/js_logo.png" height="200" width="200" >
+            </div>
+            <div class="tagStyle" style="width: 150px;">
+            </div>
+            <p>Javascript</p>
+          </a>
+        </div>
+
+    <!-- -------------------8 -->
+
+    <div class="chWrprInner">
+    <a  routerLink ="/category/Java">
+      <div class="chImgWrpr">
+        <img src="assets/images/java.png" height="200" width="200" >
+      </div>
+      <div class="tagStyle" style="width: 150px;">
+      </div>
+      <p>Java</p>
+    </a>
+    </div>
+
+    <!-- -------------------9 -->
+
+    <div class="chWrprInner">
+      <a  routerLink ="/category/Data Science">
+        <div class="chImgWrpr">
+          <img src="assets/images/data-science-logo.png" height="200" width="200" >
+        </div>
+        <div class="tagStyle" style="width: 150px;">
+        </div>
+        <p>Data Science</p>
+      </a>
+    </div>
+      <!-- -------------------10 -->
+
+      <div class="chWrprInner">
+        <a  routerLink ="/category/windows">
+          <div class="chImgWrpr">
+            <img src="assets/images/windows.png" height="200" width="200" >
+          </div>
+          <div class="tagStyle" style="width: 150px;">
+          </div>
+          <p>Windows</p>
+        </a>
+      </div>
+
+      <!-- -------------------11 -->
+
+  <div class="chWrprInner">
+  <a  routerLink ="/category/Nodejs">
+    <div class="chImgWrpr">
+      <img src="assets/images/nodejs.png" height="200" width="200" >
+    </div>
+    <div class="tagStyle" style="width: 150px;">
+    </div>
+    <p>Nodejs</p>
+  </a>
+  </div>
+
+  <!-- -------------------12 -->
+
+  <div class="chWrprInner">
+    <a  routerLink ="/category/PHP">
+      <div class="chImgWrpr">
+        <img src="assets/images/php-log.png" height="200" width="200" >
+      </div>
+      <div class="tagStyle" style="width: 150px;">
+      </div>
+      <p>Php</p>
+    </a>
+  </div>
+
+  <!-- -------------------13 -->
+
+  <div class="chWrprInner">
+    <a  routerLink ="/category/Object-Oriented Programming">
+      <div class="chImgWrpr">
+        <img src="assets/images/oop.png" height="200" width="200" >
+      </div>
+      <div class="tagStyle" style="width: 150px;">
+      </div>
+      <p>OOP</p>
+    </a>
+  </div>
+
+  <!-- -------------------14 -->
+
+  <div class="chWrprInner">
+  <a  routerLink ="/category/Software Engineering">
+    <div class="chImgWrpr">
+      <img src="assets/images/software_engg.png" height="200" width="200" >
+    </div>
+    <div class="tagStyle" style="width: 150px;">
+    </div>
+    <p>Software Engineering</p>
+  </a>
+  </div>
+
+  <!-- -------------------15 -->
+
+  <div class="chWrprInner">
+    <a  routerLink ="/category/Microsoft">
+      <div class="chImgWrpr">
+        <img src="assets/images/The-Microsoft-Logo.jpg" height="200" width="200" >
+      </div>
+      <div class="tagStyle" style="width: 150px;">
+      </div>
+      <p>Microsoft</p>
+    </a>
+  </div>
+  <!-- -------------------16 -->
+
+  <div class="chWrprInner">
+        <a  routerLink ="/category/.NET">
+          <div class="chImgWrpr">
+            <img src="assets/images/microet_images.png" height="200" width="200" >
+          </div>
+          <div class="tagStyle" style="width: 150px;">
+          </div>
+          <p>.Net</p>
+        </a>
+      </div>
+
+  <!-- -------------------8 -->
+
+  <div class="chWrprInner">
+  <a  routerLink ="/category/Gradle">
+    <div class="chImgWrpr">
+      <img src="assets/images/gradle.png" height="200" width="200" >
+    </div>
+    <div class="tagStyle" style="width: 150px;">
+    </div>
+    <p>Gradle</p>
+  </a>
+  </div>
+
+  <!-- -------------------9 -->
+
+  <div class="chWrprInner">
+    <a  routerLink ="/category/Internet">
+      <div class="chImgWrpr">
+        <img src="assets/images/Internet.png" height="200" width="200" >
+      </div>
+      <div class="tagStyle" style="width: 150px;">
+      </div>
+      <p>Internet</p>
+    </a>
+  </div>
+</div>
+</div>
+  <br>
+  <a href="https://www.ketto.org/fundraiser/bewakoof">
+    <img src="https://images.bewakoof.com/uploads/grid/app/fundraiser-creative-desktop-1619617329.jpg" alt="Ketto" style=" width: 100%; top: 0px;">
+  </a>
+  <br>
+  <div class="container-fluid" style="background-color:gainsboro;padding-top: 25px; "  >
+    <div  style="background-color:gainsboro ;height: 45px; padding: 40px; margin-bottom: 8px; text-align: center;"><h3>  POPULAR AUTHORS </h3> </div> 
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="our-team">
+        <div class="picture">
+          <img class="img-fluid" src="assets/images/adam-benoit.jpg">
+        </div>
+        <div class="team-content">
+          <h3 class="name">Adam Benoit</h3>
+          <h4 class="title">Author</h4>
+        </div>
+        <ul class="social">
+          <li><a routerLink ="/author/Adam Benoit" >VISIT</a></li>
+          </ul>
+      </div>
+    </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="our-team">
+        <div class="picture">
+          <img class="img-fluid" src="assets/images/Clinton_Begin.jpg">
+        </div>
+        <div class="team-content">
+          <h3 class="name">Clinton Begin</h3>
+          <h4 class="title">Author</h4>
+        </div>
+        <ul class="social">
+          <li><a routerLink ="/author/Clinton Begin" aria-hidden="true">VISIT</a></li>
+          </ul>
+      </div>
+    </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="our-team">
+        <div class="picture">
+          <img class="img-fluid" src="assets/images/Michael_Shoffner.jpg">
+        </div>
+        <div class="team-content">
+          <h3 class="name">Michael Shoffner</h3>
+          <h4 class="title">Author</h4>
+        </div>
+        <ul class="social">
+          <li><a routerLink ="/author/Clinton Begin" aria-hidden="true">VISIT</a></li>
+          </ul>
+      </div>
+    </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="our-team">
+        <div class="picture">
+          <img class="img-fluid" src="assets/images/RobAllen.jpg">
+        </div>
+        <div class="team-content">
+          <h3 class="name">Rob Allen</h3>
+          <h4 class="title">Author</h4>
+        </div>
+        <ul class="social">
+          <li><a routerLink ="/author/Rob Allen" aria-hidden="true">VISIT</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="our-team">
+        <div class="picture">
+          <img class="img-fluid" src="assets/images/VikramGoyal.jpg">
+        </div>
+        <div class="team-content">
+          <h3 class="name">Vikram Goyal</h3>
+          <h4 class="title">Author</h4>
+        </div>
+        <ul class="social">
+          <li><a routerLink ="/author/Vikram Goyal" aria-hidden="true">VISIT</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="our-team">
+        <div class="picture">
+          <img class="img-fluid" src="assets/images/VikasHazrati.jpg">
+        </div>
+        <div class="team-content">
+          <h3 class="name">Vikas Hazrati</h3>
+          <h4 class="title">Author</h4>
+        </div>
+        <ul class="social">
+          <li><a routerLink ="/author/Vikas Hazrati" aria-hidden="true">VISIT</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="our-team">
+        <div class="picture">
+          <img class="img-fluid" src="assets/images/MartijnDashorst.jpg">
+        </div>
+        <div class="team-content">
+          <h3 class="name">Martijn Dashorst</h3>
+          <h4 class="title">Author</h4>
+        </div>
+        <ul class="social">
+          <li><a routerLink ="/author/Martijn Dashorst" aria-hidden="true">VISIT</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="our-team">
+        <div class="picture">
+          <img class="img-fluid" src="assets/images/AlexHolmes.jpg">
+        </div>
+        <div class="team-content">
+          <h3 class="name">Alex Holmes</h3>
+          <h4 class="title">Author</h4>
+        </div>
+        <ul class="social">
+          <li><a routerLink ="/author/Alex Holmes" aria-hidden="true">VISIT</a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+<br><br>
+ 
+
+
+
+<!-- <app-footer></app-footer> -->
+<!-- <router-outlet></router-outlet> -->
+

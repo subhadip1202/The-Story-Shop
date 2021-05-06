@@ -1,0 +1,83 @@
+.formcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formbody{
+    display: flex;
+    width: 290px;
+    min-height: 200px;
+    background-color: white;
+    box-shadow:0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    margin-top:10px;
+}
+
+div > span {
+    font-size: 0.75rem;
+    color: firebrick;
+}
+
+*{
+    Font-Family: 'Cabin', Sans-Serif;
+}
+
+
+  .header{
+      /* font-size: 2rem; */
+      text-align: center;
+      margin-bottom: 40px;   
+      Font-Family: 'Cabin', Sans-Serif;
+    Font-Size: 20px;   
+  }
+
+
+  .form-btn{
+    background-color: black;
+    color:white;
+   border-radius: 0;
+    border:2px solid white;
+    width:250px;
+    margin-left: 0px;
+}
+.form-btn:hover{
+    background-color: #fdae2f;
+    color:black;
+   border-radius: 0;
+    border:2px solid black;
+    width:250px;
+    margin-left: 0px;
+}
+
+
+.form-btn-hollow{
+  background-color: black;
+  font-weight: bold;
+    color:white;
+    border-radius: 0;
+    border:2px solid white;
+   
+}
+.form-btn-hollow:hover{
+    background-color: #fdae2f;
+    font-weight: bold;
+      color:black;
+      border-radius: 0;
+      border:2px solid black;
+     
+  }
+
+  button{
+    Font-Family: 'Cabin', Sans-Serif;
+    Font-Size: 16px;
+  }
+
+/* 
+  Font-Family: 'Roboto Condensed', Sans-Serif;
+  Font-Size: 35px;
+
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 16px; */

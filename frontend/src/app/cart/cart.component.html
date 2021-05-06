@@ -1,0 +1,64 @@
+<app-header></app-header>
+<br>
+<span style=" text-align: center;"><h3>CART</h3></span>
+
+
+<br>
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+     
+          <table class="table table-image" >
+            <thead>
+              <tr >
+                <th scope="col">Image</th>
+                <th scope="col">Title</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quatity</th>
+                <!-- <th scope="col">Product Total</th> -->
+                <th scope="col">Remove</th>
+  
+              </tr>
+            </thead>
+            <tbody *ngFor= "let ss of cartproducts">
+              <tr *ngFor= "let ssa of ss.products;let m = index">
+                <td class="w-25">
+                    <a routerLink ="/testdetails/{{ssa._id}}"> 
+                    <img src="{{ssa.thumbnailUrl}}" class="img-fluid img-thumbnail" width="150" height="200">
+                    </a>
+                </td>
+                <td>{{ssa.title}}</td>
+                <td>{{ssa.price}}</td>
+                <!-- <td >
+                 
+                 <input type="text" class="form-control" style="width: 150px;" #myname placeholder="Enter Quantity" min="1">
+                 
+                </td> -->
+                <td>
+                  <button class="btn btn-success" (click)="calculatea(ssa.price,myname.value)" > + </button> 
+                  <button class="btn btn-success" (click)="calculates(ssa.price,myname.value)" > - </button> 
+                  
+                </td>
+
+                <td>
+                  <button class="btn btn-danger" (click)="removeitem(ss._id)">Remove</button>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+            <div style="float: right;">
+              <div style="  display: inline-block; padding:20px">
+              <button style=" display: inline-block "class="btn btn-primary" (click)="calculateToT()"> TOTAL</button>
+             <h2 style=" display: inline-block;">{{total}}</h2></div>
+             <span>
+               <button class="btn btn-warning" (click)="checkout(cartproducts.email)"> CHECKOUT</button></span>
+             </div>
+          
+           
+      </div>
+    </div>
+  </div>
+
+
+    <app-footer></app-footer>

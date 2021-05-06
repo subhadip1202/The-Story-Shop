@@ -1,0 +1,98 @@
+<app-header></app-header>
+<img src="https://images.bewakoof.com/uploads/grid/app/Desktop-All-Order-1619600650.png"  style=" width: 100%; top: 0px;">
+<br>
+
+<span style=" text-align: center;"><h3>CATEGORY WISE BOOKS</h3></span>
+
+<br>
+
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" >
+      <h2>
+      Sort By</h2>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" >
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" (click)="loadpage()">Relevance </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  (click)="loadsortasc()" >Price -- Low to High </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="loadsortdsc()">Price -- High to Low</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  (click)="loadsortatoz()" >Title -- A-Z </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="loadsortztoa()">Price -- Z-A</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+<br><br>>
+<div class="row">
+<div class="col-lg-2 col-xl-2 mx-auto" style="border:1px solid rgb(151, 150, 153); background-color:rgb(205, 205, 206) ; height: max-content;padding:20px ;Font-Family: 'Cabin', Sans-Serif; align-items:center;">
+
+  <h4><strong>Discount Range</strong></h4>
+
+  <button class="btn btn-danger" (click)="clearalldr()"> Clear All &nbsp; &nbsp;<i class="bi bi-x-circle"></i></button>  
+<br>
+
+    <input type="checkbox"  [(ngModel)]="filterdis.zt"/> 20% Off or less<br>
+    <input type="checkbox" [(ngModel)]="filterdis.tf"  /> 20% to 50% Off <br>
+    <input type="checkbox" [(ngModel)]="filterdis.fe"  /> 50% to 80% Off<br>
+    
+<hr>
+<h4><strong>Price Range</strong></h4>
+
+<button class="btn btn-danger" (click)="clearallpr()"> Clear All &nbsp; &nbsp;<i class="bi bi-x-circle"></i></button> 
+<br> 
+<input type="checkbox" [(ngModel)]="filterdis.pzf" /> 0 - 500<br>
+<input type="checkbox" [(ngModel)]="filterdis.pft"  /> 500 - 2000 <br>
+<input type="checkbox" [(ngModel)]="filterdis.ptf"  /> 2000 - 4000<br>
+<input type="checkbox" [(ngModel)]="filterdis.pff"  /> 4000 - 5000<br>
+<input type="checkbox" [(ngModel)]="filterdis.paf"  /> Above 5000<br>
+
+</div>
+
+<div class="col-lg-8 col-xl-9 mx-auto" style="border:1px solid rgb(126, 123, 123); padding-left: 5%; background-color:rgb(205, 205, 206) " >
+
+    <div class="card " *ngFor="let detail of getPriceFilteredProducts() " style="width: 18rem; height: 43rem; display: inline-flex; padding: 10px; margin: 5px;">
+      <a routerLink ="/testdetails/{{detail._id}}"><img class="card-img-top" src="{{detail.thumbnailUrl}}" alt="Card image cap"> </a> 
+      <div class="card-body" style="height: 13rem;">
+        <h4 class="card-title" style="text-align: center; height:70px ;  color:black">{{detail.title}}</h4>
+        <p class="card-text" style="text-align: center;height:60px "> {{detail.authors}}</p>
+
+            <p style="color:green; text-align: center;">   &#x20B9;{{detail.price}}</p>
+            <p class="card-text" style="text-align: center;">{{detail.categories}}</p>
+          </div>
+            <span class="card-body">
+              <button class="btn" (click)="addToList(detail._id,username)" >
+                <i class="bi bi-heart-fill " ></i>
+              </button>
+              <button class="btn" style="float: right;" (click)="addToCart(detail._id,username)">
+
+              <i class="bi bi-cart-plus-fill"></i>
+              </button>
+            </span>
+          
+    </div>
+    
+</div>
+  
+</div>
+
+
+
+
+<app-footer></app-footer>

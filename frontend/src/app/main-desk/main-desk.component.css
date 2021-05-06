@@ -1,0 +1,41 @@
+.body{
+    background-color: black;
+}
+
+
+
+.container-fluid{
+    
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../assets/images/dark.jpg');
+    background-size:100%
+}
+
+.header{
+    display: inline-block;
+    align-items: center;
+    border: 2px solid palevioletred;
+    text-align: center;
+}
+.headerLogo{
+    font-size: 4rem;
+    font-weight: bold;
+    margin: auto;
+    color: #fdae2f;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    align-items: center;
+    
+}
+
+*{
+    Font-Family: 'Roboto Condensed', Sans-Serif
+}
+
+/* 
+  Font-Family: 'Roboto Condensed', Sans-Serif;
+  Font-Size: 35px;
+
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 16px; */

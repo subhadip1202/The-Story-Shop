@@ -1,0 +1,40 @@
+.container {
+    padding: 2rem 0rem;
+  }
+
+h4 {
+    margin: 2rem 0rem 1rem;
+  }
+  
+ 
+  .table-image td,th{
+      vertical-align: middle;
+      Font-Family: 'Cabin', Sans-Serif;
+    }
+  
+
+    
+h3{
+  Font-Family: 'Roboto Condensed', Sans-Serif;
+Font-Size: 35px;
+}
+
+h4{
+  Font-Family: 'Cabin', Sans-Serif;
+Font-Size: 16px; 
+}
+
+a,li,ul,p,title,th,td,thead,tbody,table,tr,button{
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 16px;
+}
+
+.card-title{
+Font-Family: 'Roboto Condensed', Sans-Serif;
+Font-Size: 23px;
+}
+
+.card-text{
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 16px;
+}

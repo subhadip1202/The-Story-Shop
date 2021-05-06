@@ -1,0 +1,35 @@
+.bi-heart-fill{
+
+    color: rgb(219, 3, 118);
+  }
+  
+  .bi-cart-plus-fill{
+    color:gold
+  }
+
+
+  
+h3{
+  Font-Family: 'Roboto Condensed', Sans-Serif;
+Font-Size: 35px;
+}
+
+h4{
+  Font-Family: 'Cabin', Sans-Serif;
+Font-Size: 16px; 
+}
+
+a,li,ul,p,title{
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 16px;
+}
+
+.card-title{
+Font-Family: 'Roboto Condensed', Sans-Serif;
+Font-Size: 23px;
+}
+
+.card-text{
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 16px;
+}
