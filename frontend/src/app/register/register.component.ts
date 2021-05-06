@@ -59,7 +59,7 @@ export class RegisterComponent implements OnInit {
     if (this.myForm.valid) {
       this._myservice.submitRegister(this.myForm.value)
         .subscribe(
-          data => this.successMessage = 'Activation link is send to your email',
+          data => this.successMessage = 'Activation link is sent to your email',
           error => this.successMessage = error.error.message
         );
     }
