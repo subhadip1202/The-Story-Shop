@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -29,6 +29,8 @@ import { AuthorComponent } from './author/author.component';
 import { DiscountComponent } from './discount/discount.component';
 import { CartComponent } from './cart/cart.component';
 import { BookdetailsService } from './bookdetails.service';
+// import { NgxSpinnerModule } from "ngx-spinner";
+
 
 @NgModule({
   declarations: [
@@ -60,10 +62,13 @@ import { BookdetailsService } from './bookdetails.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    Ng2SearchPipeModule,
+    Ng2SearchPipeModule
+
+    // NgxSpinnerModule
     
   ],
   providers: [ MyserviceService,BookdetailsService],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

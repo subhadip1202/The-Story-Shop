@@ -72,8 +72,10 @@
       <div class="card-body" style="height: 13rem;">
         <h4 class="card-title" style="text-align: center; height:70px ;  color:black">{{detail.title}}</h4>
         <p class="card-text" style="text-align: center;height:60px "> {{detail.authors}}</p>
-
-            <p style="color:green; text-align: center;">   &#x20B9;{{detail.price}}</p>
+      <p class="card-text" style="color:green; text-align:center">
+            &#x20B9;{{detail.price}}
+                       ( {{detail.discount}} % Off )
+      </p>
             <p class="card-text" style="text-align: center;">{{detail.categories}}</p>
           </div>
             <span class="card-body">
